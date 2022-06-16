@@ -58,7 +58,7 @@ def readBLOB(emp_id):
             image = row[2]
             file = row[3]
             print("Storing employee image and bio-data on disk \n")
-            write_file(image, "D:\python project\myProject\Bealajar_c++\webAbsensi\\absensi\{}".format(nama))
+            write_file(image, "path folder\{}".format(nama)) 
 
     except mysql.connector.Error as error:
         print("Failed to read BLOB data from MySQL table {}".format(error))
