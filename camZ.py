@@ -9,7 +9,7 @@ idx = []
 connection2 = mysql.connector.connect(host='localhost',
                                             database='absensi',
                                             user='root',
-                                            password='koboserver')
+                                            password='')
 
 cursor = connection2.cursor()
 cursor.execute("SELECT * FROM python_employee")
@@ -43,7 +43,7 @@ def readBLOB(emp_id):
         connection = mysql.connector.connect(host='localhost',
                                              database='absensi',
                                              user='root',
-                                             password='koboserver')
+                                             password='')
 
         cursor = connection.cursor()
         sql_fetch_blob_query = """SELECT * from python_employee where id = %s"""
@@ -75,7 +75,7 @@ def insertBLOB(name, photo, biodataFile):
         connection = mysql.connector.connect(host='localhost',
                                              database='absensi',
                                              user='root',
-                                             password='koboserver')
+                                             password='')
 
         cursor = connection.cursor()
         sql_insert_blob_query = """ INSERT INTO python_employee
@@ -106,7 +106,7 @@ def updateBLOB(name, photo, biodataFile):
         connection = mysql.connector.connect(host='localhost',
                                              database='absensi',
                                              user='root',
-                                             password='koboserver')
+                                             password='')
 
         cursor = connection.cursor()
         sql_update_blob_query = """ UPDATE python_employee SET name = %s, photo = %s, biodata = %s WHERE id = %s """
