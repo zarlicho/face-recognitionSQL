@@ -134,7 +134,7 @@ elif choice == 'REGISTER':
         with open(os.path.join("absensi",image_file.name),"wb") as f: 
             f.write(image_file.getbuffer())  
             print(image_file.name)  
-            imgFile = "D:\python project\myProject\Bealajar_c++\webAbsensi\\absensi\{}".format(image_file.name)
+            imgFile = "D:\python project\myProject\Bealajar_c++\webAbsensi\\absensi\{}".format(image_file.name) #sesuaikan path folder punya kalian
             camZ.insertBLOB(image_file.name, imgFile, "absensi.csv")     
         st.success("Saved File")
 
